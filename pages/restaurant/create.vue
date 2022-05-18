@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center" align="center">
-    <v-col cols="8">
+    <v-col sm="12" md="8">
       <v-card class="py-4 px-4">
         <add-restaurant>
           <template #header>
