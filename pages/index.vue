@@ -54,12 +54,16 @@ import firebaseAPI from '@/api/firebase'
 export default {
   name: 'IndexPage',
   components: { LamiaLogo },
+  data () {
+    return {
+      restaurantList: []
+    }
+  },
   async created () {
     const db = this.$fire.firestore
     let restaurantList = null
     try {
-      restaurantList = await firebaseAPI.getAll(db, 'restaurant')
-      return { restaurantList }
+      this.restaurantList = await firebaseAPI.getAll(db, 'restaurant')
     } catch (e) {
       throw new Error(e)
     }
