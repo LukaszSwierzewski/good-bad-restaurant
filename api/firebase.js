@@ -18,7 +18,7 @@ const firebaseAPI = {
     }
   },
   get () {
-    // TODO
+    // TOD
   },
   async create (db, collectionName, payload) {
     if (!payload) { throw new Error('payload is required!') }
