@@ -5,7 +5,6 @@
     lazy-validation
   >
     <h1><slot name="header" /></h1>
-    {{ name }}
     <v-text-field
       v-model="name"
       :rules="nameRules"

@@ -18,7 +18,7 @@ const firebaseAPI = {
     }
   },
   get () {
-    // TOD
+    // TODO
   },
   async create (db, collectionName, payload) {
     if (!payload) { throw new Error('payload is required!') }
@@ -34,7 +34,7 @@ const firebaseAPI = {
   async search (db, collectionName, queryKey, query) {
     const ref = db.collection(collectionName)
     try {
-      const snapshot = await ref.where(queryKey, '>=', query).where(queryKey, '<=', query + '~').get()
+      const snapshot = await ref.where(queryKey, '>=', query).get()
       if (snapshot.docs) {
         return snapshot.docs.map((doc) => {
           return doc.data()
